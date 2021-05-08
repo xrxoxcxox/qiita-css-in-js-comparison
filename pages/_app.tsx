@@ -13,6 +13,10 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+          rel="stylesheet"
+        />
       </Head>
       <Component {...pageProps} />
     </>
