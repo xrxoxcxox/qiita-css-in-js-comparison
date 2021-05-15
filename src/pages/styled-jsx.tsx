@@ -23,7 +23,11 @@ const StyledJSX: FC = () => {
         <main className="main">
           <h2 className="main__headline">ホーム</h2>
           {feedItemsDataset.map((data) => (
-            <StyledJSXFeedItem data={data} key={data.title} />
+            <StyledJSXFeedItem
+              data={data}
+              key={data.title}
+              className={`feedItem ${className}`}
+            />
           ))}
         </main>
         <aside className="sidebar">
@@ -69,6 +73,10 @@ const { className, styles } = css.resolve`
     grid-area: navigation;
     position: sticky;
     top: 88px;
+  }
+
+  .feedItem {
+    margin-top: 16px;
   }
 
   .footer {

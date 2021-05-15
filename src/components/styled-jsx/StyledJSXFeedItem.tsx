@@ -13,13 +13,14 @@ type Data = {
 
 type Props = {
   data: Data
+  className?: string
 }
 
-export const StyledJSXFeedItem: FC<Props> = ({ data }) => {
+export const StyledJSXFeedItem: FC<Props> = ({ data, className }) => {
   const { thumbnail, date, title, favorites, comments, url } = data
   return (
     <>
-      <article className="feedItem">
+      <article className={`feedItem ${className}`}>
         {thumbnail && (
           <a href={url} className="feedItem__thumbnailWrapper">
             <img src={thumbnail} alt="" className="feedItem__thumbnail" />
@@ -44,7 +45,7 @@ export const StyledJSXFeedItem: FC<Props> = ({ data }) => {
             <StyledJSXButton
               size="s"
               variant="border"
-              className={`feedItem__button ${className}`}
+              className={`feedItem__button ${resolvedClassName}`}
               onClick={() => alert(`「${title}」を保存`)}
             >
               保存
@@ -62,7 +63,6 @@ const feedItemStyle = css`
   .feedItem {
     background-color: var(--color-surface);
     border-radius: 4px;
-    margin-top: 16px;
     overflow: hidden;
   }
 
@@ -125,7 +125,7 @@ const feedItemStyle = css`
   }
 `
 
-const { className, styles } = css.resolve`
+const { className: resolvedClassName, styles } = css.resolve`
   .feedItem__button {
     margin-left: auto;
   }

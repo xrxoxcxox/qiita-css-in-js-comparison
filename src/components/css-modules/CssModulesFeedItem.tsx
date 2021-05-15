@@ -14,12 +14,13 @@ type Data = {
 
 type Props = {
   data: Data
+  className?: string
 }
 
-export const CssModulesFeedItem: FC<Props> = ({ data }) => {
+export const CssModulesFeedItem: FC<Props> = ({ data, className }) => {
   const { thumbnail, date, title, favorites, comments, url } = data
   return (
-    <article className={styles.feedItem}>
+    <article className={clsx(styles.feedItem, className)}>
       {thumbnail && (
         <a href={url} className={styles.feedItem__thumbnailWrapper}>
           <img src={thumbnail} alt="" className={styles.feedItem__thumbnail} />

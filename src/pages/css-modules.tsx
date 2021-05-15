@@ -23,7 +23,11 @@ const CSSModules: FC = () => {
         <main className={styles.main}>
           <h2 className={styles.main__headline}>ホーム</h2>
           {feedItemsDataset.map((data) => (
-            <CssModulesFeedItem data={data} key={data.title} />
+            <CssModulesFeedItem
+              data={data}
+              key={data.title}
+              className={styles.feedItem}
+            />
           ))}
         </main>
         <aside className={styles.sidebar}>
