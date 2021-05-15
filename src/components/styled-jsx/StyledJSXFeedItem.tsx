@@ -33,7 +33,7 @@ export const StyledJSXFeedItem: FC<Props> = ({ data }) => {
             <h3 className="feedItem__title">{title}</h3>
           </a>
           <div className="feedItem__reactions">
-            <span className="material-icons-round styles.feedItem__reactionIcon">
+            <span className="material-icons-round feedItem__reactionIcon">
               favorite
             </span>
             <span className="feedItem__reactionCount">{favorites}</span>
