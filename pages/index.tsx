@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 const Home: FC = () => {
   return (
@@ -10,7 +11,17 @@ const Home: FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Index Page</h1>
+      <div className="indexWrapper">
+        <h1 className="indexTitle">Styling with...</h1>
+        <div className="indexLinks">
+          <Link href="/css-modules">
+            <a className="indexLink">CSS Modules</a>
+          </Link>
+          <Link href="/styled-jsx">
+            <a className="indexLink">styled-jsx</a>
+          </Link>
+        </div>
+      </div>
     </>
   )
 }
