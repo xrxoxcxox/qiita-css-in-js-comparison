@@ -15,7 +15,9 @@
     "sass": "^1.32.12"
   },
   "devDependencies": {
+    "@styled-jsx/plugin-sass": "^3.0.0",
     "@types/react": "^17.0.5",
+    "@types/styled-jsx": "^2.2.8",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.25.0",
