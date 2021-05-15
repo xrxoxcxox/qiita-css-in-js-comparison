@@ -1,9 +1,14 @@
 import { FC } from 'react'
 import styles from '../../styles/css-modules-footer.module.scss'
+import clsx from 'clsx'
 
-export const CssModulesFooter: FC = () => {
+type Props = {
+  className?: string
+}
+
+export const CssModulesFooter: FC<Props> = ({ className }) => {
   return (
-    <footer className={styles.footer}>
+    <footer className={clsx(styles.footer, className)}>
       <div className={styles.footer__links}>
         <a href="#" className={styles.footer__link}>
           ヘルプ

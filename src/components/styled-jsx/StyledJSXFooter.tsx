@@ -1,10 +1,14 @@
 import { FC } from 'react'
 import css from 'styled-jsx/css'
 
-export const StyledJSXFooter: FC = () => {
+type Props = {
+  className?: string
+}
+
+export const StyledJSXFooter: FC<Props> = ({ className }) => {
   return (
     <>
-      <footer className="footer">
+      <footer className={`footer ${className}`}>
         <div className="footer__links">
           <a href="#" className="footer__link">
             ヘルプ
@@ -27,7 +31,6 @@ const footerStyle = css`
   .footer {
     color: var(--color-dark-text-medium);
     font-size: var(--font-size-body2);
-    margin-top: 16px;
   }
 
   .footer__links {

@@ -28,7 +28,7 @@ const StyledJSX: FC = () => {
         </main>
         <aside className="sidebar">
           <StyledJSXRanking dataset={RankingDataset} />
-          <StyledJSXFooter />
+          <StyledJSXFooter className={`footer ${className}`} />
         </aside>
       </div>
       <style jsx>{pageStyles}</style>
@@ -69,6 +69,10 @@ const { className, styles } = css.resolve`
     grid-area: navigation;
     position: sticky;
     top: 88px;
+  }
+
+  .footer {
+    margin-top: 16px;
   }
 `
 

@@ -28,7 +28,7 @@ const CSSModules: FC = () => {
         </main>
         <aside className={styles.sidebar}>
           <CssModulesRanking dataset={RankingDataset} />
-          <CssModulesFooter />
+          <CssModulesFooter className={styles.footer} />
         </aside>
       </div>
     </>
