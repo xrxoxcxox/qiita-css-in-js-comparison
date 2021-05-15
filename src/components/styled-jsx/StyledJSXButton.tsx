@@ -42,7 +42,7 @@ const buttonStyle = css`
 
   .fill {
     background-color: var(--color-primary);
-    color: var(--color-surface);
+    color: var(--color-light-text-high);
     &:hover {
       background-color: var(--color-primary-dark);
     }
