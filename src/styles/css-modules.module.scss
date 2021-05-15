@@ -7,6 +7,15 @@
   padding: 24px 16px 48px;
 }
 
+.navigation {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  grid-area: navigation;
+  position: sticky;
+  top: 88px;
+}
+
 .main {
   grid-area: main;
 }

@@ -19,7 +19,7 @@ const StyledJSX: FC = () => {
       </Head>
       <StyledJSXHeader />
       <div className="contents">
-        <StyledJSXNavigation />
+        <StyledJSXNavigation className={`navigation ${className}`} />
         <main className="main">
           <h2 className="main__headline">ホーム</h2>
           {feedItemsDataset.map((data) => (
@@ -31,12 +31,13 @@ const StyledJSX: FC = () => {
           <StyledJSXFooter />
         </aside>
       </div>
-      <style jsx>{styles}</style>
+      <style jsx>{pageStyles}</style>
+      {styles}
     </>
   )
 }
 
-const styles = css`
+const pageStyles = css`
   .contents {
     display: grid;
     grid-column-gap: 16px;
@@ -57,6 +58,17 @@ const styles = css`
 
   .sidebar {
     grid-area: sidebar;
+  }
+`
+
+const { className, styles } = css.resolve`
+  .navigation {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    grid-area: navigation;
+    position: sticky;
+    top: 88px;
   }
 `
 

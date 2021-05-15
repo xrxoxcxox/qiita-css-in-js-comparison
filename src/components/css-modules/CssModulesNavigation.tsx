@@ -2,9 +2,13 @@ import { FC } from 'react'
 import styles from '../../styles/css-modules-navigation.module.scss'
 import clsx from 'clsx'
 
-export const CssModulesNavigation: FC = () => {
+type Props = {
+  className?: string
+}
+
+export const CssModulesNavigation: FC<Props> = ({ className }) => {
   return (
-    <nav className={styles.navigation}>
+    <nav className={className}>
       <a href="#" className={styles.navigation__link}>
         <span
           className={clsx('material-icons-round', styles.navigation__linkIcon)}

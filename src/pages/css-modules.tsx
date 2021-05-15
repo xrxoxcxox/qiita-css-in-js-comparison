@@ -19,7 +19,7 @@ const CSSModules: FC = () => {
       </Head>
       <CssModulesHeader />
       <div className={styles.contents}>
-        <CssModulesNavigation />
+        <CssModulesNavigation className={styles.navigation} />
         <main className={styles.main}>
           <h2 className={styles.main__headline}>ホーム</h2>
           {feedItemsDataset.map((data) => (

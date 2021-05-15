@@ -1,10 +1,14 @@
 import { FC } from 'react'
 import css from 'styled-jsx/css'
 
-export const StyledJSXNavigation: FC = () => {
+type Props = {
+  className?: string
+}
+
+export const StyledJSXNavigation: FC<Props> = ({ className }) => {
   return (
     <>
-      <nav className="navigation">
+      <nav className={className}>
         <a href="#" className="navigation__link">
           <span className="material-icons-round navigation__linkIcon">
             home
@@ -30,15 +34,6 @@ export const StyledJSXNavigation: FC = () => {
 }
 
 const navigationStyle = css`
-  .navigation {
-    align-self: start;
-    display: flex;
-    flex-direction: column;
-    grid-area: navigation;
-    position: sticky;
-    top: 88px;
-  }
-
   .navigation__link {
     border-radius: 2px;
     color: inherit;
