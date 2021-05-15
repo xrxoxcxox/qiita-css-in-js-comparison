@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styles from '../styles/css-modules-navigation.module.scss'
+import styles from '../../styles/css-modules-navigation.module.scss'
 import clsx from 'clsx'
 
 export const CssModulesNavigation: FC = () => {

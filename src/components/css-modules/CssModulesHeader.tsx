@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import { CssModulesButton } from './CssModulesButton'
-import styles from '../styles/css-modules-header.module.scss'
+import styles from '../../styles/css-modules-header.module.scss'
 
 export const CssModulesHeader: FC = () => {
   return (

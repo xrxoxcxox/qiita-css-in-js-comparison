@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styles from '../styles/css-modules-ranking.module.scss'
+import styles from '../../styles/css-modules-ranking.module.scss'
 
 type Data = { title: string; url: string }[]
 

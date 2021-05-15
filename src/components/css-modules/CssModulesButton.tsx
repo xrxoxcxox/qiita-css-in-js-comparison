@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import styles from '../styles/css-modules-button.module.scss'
+import styles from '../../styles/css-modules-button.module.scss'
 import clsx from 'clsx'
 
 type InputProps = JSX.IntrinsicElements['button']

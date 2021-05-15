@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { CssModulesButton } from './CssModulesButton'
-import styles from '../styles/css-modules-feed-item.module.scss'
+import styles from '../../styles/css-modules-feed-item.module.scss'
 import clsx from 'clsx'
 
 type Data = {
